@@ -1,0 +1,130 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Верхняя панель с городом */
+.top-panel {
+    background-color: #FFE4BE;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.panel-container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.city-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.city-select {
+    padding: 8px 30px 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+/* Основное навигационное меню */
+nav {
+    background-color: #FFEACC;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.left-nav, .right-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    cursor: pointer;
+}
+/*иконки*/
+.nav-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Поисковая строка */
+.search-container {
+    flex: 1;
+    min-width: 150px;
+    max-width: 600px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 50px 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .left-nav, .right-nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .search-container {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
